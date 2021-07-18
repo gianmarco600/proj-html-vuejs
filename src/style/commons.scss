@@ -1,0 +1,13 @@
+@import 'bootstrap';
+@import "~@fontsource/quicksand/index.css";
+@import '@/style/vars.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
