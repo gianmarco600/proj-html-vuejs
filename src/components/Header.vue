@@ -4,7 +4,7 @@
       <ul class="_row justify-content-between align-items-center">
         <li class="_col">
           <!-- logo -->
-          <img id="logo" src="@/assets/img/light-logo.png" alt="">
+          <img id="logo" src="@/../public/imgs/light-logo.png" alt="">
         </li>
 
 
@@ -39,7 +39,8 @@
 export default {
   name: 'Header',
 props:{
-  links: Array
+  links: Array,
+  logo: String
   },
   data(){
     return{
@@ -48,6 +49,9 @@ props:{
   },
   methods:{
 
+  },
+  mounted(){
+    console.log(this.logo)
   }
 
 }

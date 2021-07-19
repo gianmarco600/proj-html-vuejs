@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header :links="linksLabel"/>
-    <JumboBg/>
+    <Header :logo="srcs.logoWhite" :links="linksLabel"/>
+    <Jumbo/>
     <Main/>
     <Footer/>
   </div>
@@ -11,7 +11,7 @@
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
-import JumboBg from './components/JumboBg.vue'
+import Jumbo from './components/Jumbo.vue'
 
 export default {
   name: 'App',
@@ -19,7 +19,7 @@ export default {
     Header,
     Main,
     Footer,
-    JumboBg
+    Jumbo
   },
   data(){
     return{
@@ -30,7 +30,11 @@ export default {
         'features',
         'blog',
         'shop'
-      ]
+      ],
+      srcs:{
+                anteprimaVideo : '@/assets/img/home-6-hero-poster-final.jpg',
+                logoWhite : '@/../public/imgs/light-logo.png'
+            }
     }
   }
 }
