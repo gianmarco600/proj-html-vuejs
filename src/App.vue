@@ -4,6 +4,7 @@
     <Jumbo/>
     <Main/>
     <Footer/>
+    <FixedMenu/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
 import Jumbo from './components/Jumbo.vue'
+import FixedMenu from './components/FixedMenu.vue'
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     Header,
     Main,
     Footer,
-    Jumbo
+    Jumbo,
+    FixedMenu
   },
   data(){
     return{
@@ -45,5 +48,6 @@ export default {
 
 #app {
   font-family: 'Quicksand' sans-serif;
+  
 }
 </style>

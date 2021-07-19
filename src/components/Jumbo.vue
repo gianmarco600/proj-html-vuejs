@@ -76,12 +76,14 @@ export default {
             background-color: $JungleGreen;
             height: 50px;
             width: 200px;
-            color: $White;
             font-weight: 900;
+            transition:  0.4s;
+            color: $White;
             &:hover{
                 background-color: $White;
                 color: $JungleGreen;
-                border: 2px solid $JungleGreen;
+                border: 1px solid $JungleGreen;
+                transition:  0.4s;
             }
         }
         .showcase_box{
@@ -118,7 +120,7 @@ export default {
                         &:hover{
                             transform: scale(1.2);
                             filter: brightness(1);
-                            transition: 2s;
+                            transition: 3s;
                         }
                     }
                 #youtube{
