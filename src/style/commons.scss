@@ -10,7 +10,24 @@
 
 body{
     font-family: 'Quicksand', sans-serif;
-    background-color: grey;
+    // background-color: grey;
     height: 1000vh;
     perspective: 1px;
+    
+}
+
+
+._green_btn{
+    background-color: $JungleGreen;
+    height: 50px;
+    width: 200px;
+    font-weight: 900;
+    transition:  0.4s;
+    color: $White;
+    &:hover{
+        background-color: $White;
+        color: $JungleGreen;
+        border: 1px solid $JungleGreen;
+        transition:  0.4s;
+    }
 }

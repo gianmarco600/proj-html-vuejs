@@ -18,8 +18,12 @@
                         </div>
                         
                     </div>
-                    <div class=" girl sx"><img class="speed-1" src="@/assets/img/home-6-hero-left-person.png" alt=""></div>
-                    <div class=" girl dx"><img class="speed-1" src="@/assets/img/home-6-hero-right-person-195x300.png" alt=""></div>
+                    <parallax class="parallax" :speed-factor="0.15" breakpoint="(min-width: 80px)">
+                        <div class=" girl sx"><img src="@/assets/img/home-6-hero-left-person.png" alt=""></div>
+                    
+                    
+                        <div class=" girl dx"><img src="@/assets/img/home-6-hero-right-person-195x300.png" alt=""></div>
+                    </parallax>
                 </div>
             </div>
         </div>
@@ -30,8 +34,13 @@
 </template>
 
 <script>
+import Parallax from "vue-parallaxy";
+
 export default {
     name:'Jumbo',
+    components: {
+    Parallax
+  },
     data(){
         return{
             
@@ -43,6 +52,12 @@ export default {
 <style lang="scss" scoped>
 @import '@/style/commons.scss';
 @import '@/style/vars.scss';
+.parallax{
+    width: 100vw;
+    position: absolute;
+    left:-100px;
+    top: 0px;
+}
 
 .Jumbo{
     background-color: $PortGore;
@@ -106,9 +121,10 @@ export default {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 .anteprima{
-                    width: 95%;
-                    height: 92%;
+                    width: 94%;
+                    height: 90%;
                     z-index: 9999999;
                     overflow: hidden;
                     img{
@@ -139,21 +155,22 @@ export default {
             .girl{
                 position: absolute;
                 top: -50px;
-                height: 450px;
+                height: 500px;
                 width: 100px;
-                .speed-1 {
-                    transform: translateZ(-3px) scale(1);
-                }
                 img{
-                    height: 100%;
+                    height: 90%;
+                    z-index: 999999999999;
+                    position: absolute;
+                    top: 70px;
                 }
             }
             .sx{
-               left:-100px; 
+               left:-50px; 
             }
             .dx{
-                top:150px;
-                right: 80px;
+                top:200px;
+                left: 1000px;
+                height: 400px;
             }
         }
     }

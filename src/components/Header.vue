@@ -11,7 +11,8 @@
         <li class="_col_links">
           <!-- links -->
           <ul class="links_box _row justify-content-around align-items-center">
-            <li v-for="link in links" :key="link" class="link_item">
+            <li v-for="link in links" :key="link" class="link_item" :class="link + '_father'">
+              <div :id="link" class="_dropdown" ></div>
               <a href="">{{link}} <i class="fas fa-chevron-down"></i><div class="line"></div></a>
             </li>
           </ul>
@@ -130,6 +131,11 @@ header{
       // stile colonna centrale della navbar
       .links_box{
         list-style: none;
+        .home_father{
+          &:hover #home{
+            display:block;
+          }
+        }
         .link_item{
           flex-basis: 15%;
           flex-grow: 1;
@@ -138,6 +144,17 @@ header{
           color: $White;
           height: auto;
           position: relative;
+          ._dropdown{
+            background-color: $White;
+            height: 100px;
+            display: none;
+            position: absolute;
+            bottom: 0;
+          }
+          #home{
+            width: 80vw;
+            
+          }
           .line{
               width: 0;
               height: 1px;
