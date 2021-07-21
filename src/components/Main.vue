@@ -19,24 +19,26 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="_vertical_row special_1">
-                                    <div v-for="specialCard1 in mainDatas.intro.column1CardDatas" :key="specialCard1" class="col_4">
+                                    <div v-for="(specialCard1, k) in mainDatas.intro.column1CardDatas" :key="k" class="col_4">
                                         <div class="_card">
+                                            
                                             <strong>{{specialCard1.label}}</strong>
                                             <p>{{specialCard1.text}}
                                             </p>
-                                            <img :src="require(`@/assets/img/${specialCard1.src}`)" alt="">
+                                            <img  :src="require(`@/assets/img/${specialCard1.src}`)" alt="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="_vertical_row special_2">
-                                    <div v-for="specialCard2 in mainDatas.intro.column2CardDatas" :key="specialCard2" class="col_4">
+                                    <div v-for="(specialCard2, y) in mainDatas.intro.column2CardDatas" :key="y * 3" class="col_4">
                                         <div class="_card">
+                                            
                                             <strong>{{specialCard2.label}}</strong>
                                             <p>{{specialCard2.text}}
                                             </p>
-                                            <img class="fat" :src="require(`@/assets/img/${specialCard2.src}`)" alt="">
+                                            <img  :src="require(`@/assets/img/${specialCard2.src}`)" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +53,7 @@
                                     <h5>{{mainDatas.intro.rightBanner.intro}}</h5>
                                     <strong>{{mainDatas.intro.rightBanner.main}} <span></span></strong>
                                     <ul>
-                                        <li v-for="elem in mainDatas.intro.rightBanner.list" :key="elem"><i class="fas fa-check"></i><span>{{elem}} </span></li>
+                                        <li v-for="(elem, index) in mainDatas.intro.rightBanner.list" :key="index"><i class="fas fa-check"></i><span>{{elem}} </span></li>
                                         
                                     </ul>
                                     <button type="button" class="btn _green_btn">Primary</button>
@@ -65,13 +67,13 @@
             </div>
         <Courses 
         :coursesDatas="mainDatas.courses"
-        :courses="courses"/>
+        />
         <Feeds 
         :feedsDatas="mainDatas.feed"
-        :clients="clients"/>
+        />
         <Blogs 
         :blogsData="mainDatas.blog"
-        :blogs="blogs"/>
+        />
         <PreFoot
         :prefootDatas="mainDatas.prefoot"
         />
@@ -159,7 +161,7 @@ main{
             color: $ShadyLady;
         }
         .section_1{
-            margin-top: 50px;
+            margin-top: 100px;
             display: block;
             width: 100%;
             height: 900px;
@@ -177,9 +179,9 @@ main{
                         .col_4{
                             height: 55%;
                             width: 100%;
-                            padding: 20px 0;
+                            padding: 10px 0;
                             ._card{
-                                width: 80%;
+                                width: 90%;
                                 margin: 20px auto;
                                 height: 100%;
                                 background-color: $White;
@@ -193,7 +195,8 @@ main{
                                     margin: 10px 0;
                                 }
                                 img{
-                                    width: 100%;
+                                    // width: 100%;
+                                    height: 150px;
                                     bottom: 10px;
                                 }
                                 .fat{

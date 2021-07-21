@@ -85,6 +85,7 @@ section{
             ._card{
                 width: 100%;
                 height: 200px;
+                cursor: pointer;
                 // background-color: red;
                 .info{
                     display: flex;
@@ -125,7 +126,7 @@ section{
                             color: $JungleGreen;
                         }
                         .des{
-                            font-size:21px;
+                            font-size:18px;
                             font-weight: 700;
                             margin: 10px 0;
                         }

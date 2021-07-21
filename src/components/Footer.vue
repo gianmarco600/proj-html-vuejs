@@ -79,6 +79,9 @@ footer{
                 margin: 0 20px;
                 font-size: 30px;
                 color: $Silver;
+                &:hover{
+                    color: $JungleGreen;
+                }
             }
 }
 </style>

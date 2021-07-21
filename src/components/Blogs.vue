@@ -53,6 +53,20 @@ section{
         width: 100%;
         padding: 10px;
         margin: 70px 0;
+        p{
+            font-size: 20px;
+            font-weight: 700;
+            transition: 0.8s;
+            &:hover{
+                color: $JungleGreen;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+        }
+        h6{
+            font-weight: 200;
+            font-size: 22px;
+        }
         .info{
             span{
                 margin-left: 5px;
