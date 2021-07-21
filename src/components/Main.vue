@@ -3,27 +3,14 @@
         <div class="_bg">
             <section class="container-md ">
                 <div class="_box">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae natus itaque dolore ut facere enim laboriosam ea exercitationem omnis, nesciunt placeat ullam.</h3>
-                    <h4>fannie moreno</h4>
+                    <h3>{{mainDatas.intro.main}} </h3>
                     <h6>/founder & CEO</h6>
                 </div>
                 <div class="row">
-                    <div class="col-3">
-                        <div class="_text">1.926</div>
-                        <div class="_subtext">finished sessions</div>
+                    <div v-for="card in mainDatas.intro.cardsDatas" :key="card" class="col-3">
+                        <div class="_text">{{card.num}}</div>
+                        <div class="_subtext">{{card.sub}}</div>
                     </div>  
-                    <div class="col-3">
-                        <div class="_text">1.926</div>
-                        <div class="_subtext">finished sessions</div>
-                    </div>   
-                    <div class="col-3">
-                        <div class="_text">1.926</div>
-                        <div class="_subtext">finished sessions</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="_text">1.926</div>
-                        <div class="_subtext">finished sessions</div>
-                    </div>
                 </div>  
                 <div class="section_1">
                     <div class="row">
@@ -32,42 +19,24 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="_vertical_row special_1">
-                                    <div class="col_4">
+                                    <div v-for="specialCard1 in mainDatas.intro.column1CardDatas" :key="specialCard1" class="col_4">
                                         <div class="_card">
-                                            <strong>graphic Design</strong>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, odio illo vero corrupti minus atque quos culpa .
+                                            <strong>{{specialCard1.label}}</strong>
+                                            <p>{{specialCard1.text}}
                                             </p>
-                                            <img src="@/assets/img/home-6-service-image-01.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col_4">
-                                        <div class="_card">
-                                            <img class="fat" src="@/assets/img/home-6-service-image-03.png" alt="">
-                                            <strong>graphic Design</strong>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, odio illo vero corrupti minus atque quos culpa .
-                                            </p>
-                                            
+                                            <img :src="require(`@/assets/img/${specialCard1.src}`)" alt="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="_vertical_row special_2">
-                                    <div class="col_4">
+                                    <div v-for="specialCard2 in mainDatas.intro.column2CardDatas" :key="specialCard2" class="col_4">
                                         <div class="_card">
-                                            <strong>graphic Design</strong>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, odio illo vero corrupti minus atque quos culpa .
+                                            <strong>{{specialCard2.label}}</strong>
+                                            <p>{{specialCard2.text}}
                                             </p>
-                                            <img class="fat" src="@/assets/img/home-6-service-image-02.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col_4">
-                                        <div class="_card">
-                                            <img src="@/assets/img/home-6-service-image-04.png" alt="">
-                                            <strong>graphic Design</strong>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, odio illo vero corrupti minus atque quos culpa .
-                                            </p>
-                                            
+                                            <img class="fat" :src="require(`@/assets/img/${specialCard2.src}`)" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -79,13 +48,11 @@
                             <!-- colonna di destra -->
                             <div class="_vertical_row">
                                 <div class="text_box_1">
-                                    <h5>together we can create</h5>
-                                    <strong>service we <span>can provide</span> for my clients.</strong>
+                                    <h5>{{mainDatas.intro.rightBanner.intro}}</h5>
+                                    <strong>{{mainDatas.intro.rightBanner.main}} <span></span></strong>
                                     <ul>
-                                        <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
-                                        <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
-                                        <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
-                                        <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
+                                        <li v-for="elem in mainDatas.intro.rightBanner.list" :key="elem"><i class="fas fa-check"></i><span>{{elem}} </span></li>
+                                        
                                     </ul>
                                     <button type="button" class="btn _green_btn">Primary</button>
                                 </div>
@@ -96,25 +63,41 @@
                 </div>    
             </section>
             </div>
-        <Courses/>
-        <Feeds/>
+        <Courses 
+        :coursesDatas="mainDatas.courses"
+        :courses="courses"/>
+        <Feeds 
+        :feedsDatas="mainDatas.feeds"
+        :clients="clients"/>
+        <Blogs 
+        :blogsData="mainDatas.blog"
+        :blogs="blogs"/>
+        <PreFoot
+        :prefootDatas="mainDatas.prefoot"
+        />
     </main>
 </template>
 
 <script>
 import Courses from '@/components/Courses.vue'
 import Feeds from '@/components/Feeds.vue'
-
+import Blogs from '@/components/Blogs.vue'
+import PreFoot from '@/components/PreFoot.vue'
 
 export default {
     name:"Main",
     components: {
         Courses,
-        Feeds
+        Feeds,
+        Blogs,
+        PreFoot
+    },
+    props:{
+        mainDatas: Object
     },
     data(){
         return{
-            
+        
         }
     }
 }

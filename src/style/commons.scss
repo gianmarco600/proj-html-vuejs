@@ -1,5 +1,5 @@
 @import 'bootstrap';
-@import "~@fontsource/quicksand/index.css";
+// @import "../../node_modules/@fontsource/montserrat";
 @import '@/style/vars.scss';
 
 *{
@@ -9,11 +9,14 @@
 }
 
 body{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     // background-color: grey;
-    
+    width: 100%;
     perspective: 1px;
-    
+    h1, h2, h3, h4, h5, h6{
+        text-transform: capitalize;
+
+    }
 }
 
 

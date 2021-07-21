@@ -1,20 +1,20 @@
 <template>
     <section>
         <div class="container-md">
-            <h4>choose a course to get started</h4>
-            <h3>latest featured <span>courses</span></h3>
+            <h4>{{coursesDatas.intro}}</h4>
+            <h3>{{coursesDatas.main}}<span></span></h3>
             <div class="courses row justify-content-between">
-                <div v-for="tab in courses" :key="tab" class="_col">
+                <div v-for="course in coursesDatas.coursesList" :key="course" class="_col">
                     <div class="_card">
                         <div class="info">
                             <div class="rounded_img" >
-                                <img src="@/assets/img/course-02-480x298.jpg" alt="">
+                                <img :src="require(`@/assets/img/${course.src}`)" alt="">
                             </div>
                             <div class="text_info">
-                                <div class="prezzo">$40.00</div>
-                                <div class="des">learning to write as a professional author</div>
-                                <span class="sub lessons"><i class="far fa-sticky-note"></i> 20 lessons</span>
-                                <span class="sub students"><i class="far fa-user"></i> 50 students</span>
+                                <div class="prezzo">{{course.price}}</div>
+                                <div class="des">{{course.descr}}</div>
+                                <span class="sub lessons"><i class="far fa-sticky-note"></i>{{course.lessons}} lessons</span>
+                                <span class="sub students"><i class="far fa-user"></i> {{course.students}} students</span>
                             </div>
                         </div>
                     </div>
@@ -29,9 +29,13 @@
 <script>
 export default {
     name: 'Courses',
+    props:{
+        courses:Array,
+        coursesDatas: Object
+    },
     data(){
         return{
-            courses:6
+            
         }
     }
 }
@@ -86,8 +90,14 @@ section{
                     display: flex;
                     height: 100%;
                     width: 100%;
-                    padding: 20px 10px;
+                    padding: 20px 20px;
                     justify-content: space-between;
+                    border-radius: 10px;
+                    &:hover{
+                        background-color: $White;
+                        transition: .5s;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    }
                 
                     .rounded_img{
                         width: 32%;

@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="container-md">
-            <h2>why people talck about <span>MaxCoach</span>?</h2>
+            <h2>{{feedsDatas.main}} <span></span></h2>
         
             <div class="paragraph">
                 <div class="image">
@@ -9,7 +9,7 @@
                     <img class="effect_1" src="@/assets/img/maxcoach-shape-05-150x150.png" alt="">
                 </div>
                 <div class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum illo laborum suscipit eum consequuntur exercitationem neque cum est, vero harum? Tempore tempora pariatur ullam iure fuga itaque natus eligendi commodi!</p>
+                    <p>{{feedsDatas.text}}</p>
                     <strong>Mina Hollace</strong>
                     <h6>/Freelance</h6>
                 </div>
@@ -17,24 +17,10 @@
                 
             </div>
             <div class="row">
-                <div class="col-2 justify-content-around">
-                    <img class="client" src="@/assets/img/client-logo-colored-01.png" alt="">
+                <div v-for='client in feedsDatas.clients' :key="client" class="col-2 justify-content-around">
+                    <img class="client" :src="require(`@/assets/img/${client}`)" alt="">
                 </div>
-                <div class="col-2">
-                    <img class="client" src="@/assets/img/client-logo-colored-01.png" alt="">
-                </div>
-                <div class="col-2">
-                    <img class="client" src="@/assets/img/client-logo-colored-01.png" alt="">
-                </div>
-                <div class="col-2">
-                    <img class="client" src="@/assets/img/client-logo-colored-01.png" alt="">
-                </div>
-                <div class="col-2">
-                    <img class="client" src="@/assets/img/client-logo-colored-01.png" alt="">
-                </div>
-                <div class="col-2">
-                    <img class="client" src="@/assets/img/client-logo-colored-01.png" alt="">
-                </div>
+                
             </div>
         </div>
     </section>
@@ -42,7 +28,11 @@
 
 <script>
 export default {
-    name: 'Feeds'
+    name: 'Feeds',
+    props:{
+        
+        feedsDatas: Object
+    }
 }
 </script>
 

@@ -7,22 +7,22 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="0.08" d="M0,288L11.4,277.3C22.9,267,46,245,69,208C91.4,171,114,117,137,96C160,75,183,85,206,112C228.6,139,251,181,274,202.7C297.1,224,320,224,343,234.7C365.7,245,389,267,411,250.7C434.3,235,457,181,480,154.7C502.9,128,526,128,549,112C571.4,96,594,64,617,42.7C640,21,663,11,686,53.3C708.6,96,731,192,754,192C777.1,192,800,96,823,85.3C845.7,75,869,149,891,165.3C914.3,181,937,139,960,149.3C982.9,160,1006,224,1029,245.3C1051.4,267,1074,245,1097,197.3C1120,149,1143,75,1166,74.7C1188.6,75,1211,149,1234,176C1257.1,203,1280,181,1303,170.7C1325.7,160,1349,160,1371,160C1394.3,160,1417,160,1429,160L1440,160L1440,320L1428.6,320C1417.1,320,1394,320,1371,320C1348.6,320,1326,320,1303,320C1280,320,1257,320,1234,320C1211.4,320,1189,320,1166,320C1142.9,320,1120,320,1097,320C1074.3,320,1051,320,1029,320C1005.7,320,983,320,960,320C937.1,320,914,320,891,320C868.6,320,846,320,823,320C800,320,777,320,754,320C731.4,320,709,320,686,320C662.9,320,640,320,617,320C594.3,320,571,320,549,320C525.7,320,503,320,480,320C457.1,320,434,320,411,320C388.6,320,366,320,343,320C320,320,297,320,274,320C251.4,320,229,320,206,320C182.9,320,160,320,137,320C114.3,320,91,320,69,320C45.7,320,23,320,11,320L0,320Z"></path></svg>
 
             <div class="container-md text-center">
-                <h1>Learn At Your Own Pace</h1>
-                <h3>Get teamed up with people of the same will</h3>
+                <h1>{{jumboDatas.texts.main}}</h1>
+                <h3>{{jumboDatas.texts.sub}}</h3>
                 <button type="button" class="btn _green_btn">Primary</button>
                 <div class="showcase_box ">
                     <div class="showcase">
                         <div class="anteprima">
                             <img id="youtube" src="@/assets/img/icon-youtube-play.png" alt="">
-                            <img src="@/assets/img/home-6-hero-poster-final.jpg" alt="">
+                            <img :src="require(`@/assets/img/${jumboDatas.texts.src[2]}`)" alt="">
                         </div>
                         
                     </div>
                     <parallax class="parallax" :speed-factor="0.15" breakpoint="(min-width: 80px)">
-                        <div class=" girl sx"><img src="@/assets/img/home-6-hero-left-person.png" alt=""></div>
+                        <div class=" girl sx"><img :src="require(`@/assets/img/${jumboDatas.texts.src[0]}`)" alt=""></div>
                     
                     
-                        <div class=" girl dx"><img src="@/assets/img/home-6-hero-right-person-195x300.png" alt=""></div>
+                        <div class=" girl dx"><img :src="require(`@/assets/img/${jumboDatas.texts.src[1]}`)" alt=""></div>
                     </parallax>
                 </div>
             </div>
@@ -35,11 +35,16 @@
 
 <script>
 import Parallax from "vue-parallaxy";
+// import { observable } from 'vue/types/umd';
 
 export default {
     name:'Jumbo',
     components: {
     Parallax
+  },
+  props:{
+
+    jumboDatas: Object
   },
     data(){
         return{
@@ -53,7 +58,7 @@ export default {
 @import '@/style/commons.scss';
 @import '@/style/vars.scss';
 .parallax{
-    width: 100vw;
+    width: 67vw;
     position: absolute;
     left:-100px;
     top: 0px;

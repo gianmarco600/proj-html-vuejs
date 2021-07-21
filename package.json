@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^4.5.0",
     "@fontsource/quicksand": "^4.5.0",
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "bootstrap": "^4.6.0",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fontsource/montserrat": "^4.5.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",

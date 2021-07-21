@@ -4,7 +4,7 @@
       <ul class="_row justify-content-between align-items-center">
         <li class="_col">
           <!-- logo -->
-          <img id="logo" src="@/../public/imgs/light-logo.png" alt="">
+          <img id="logo" :src="require(`@/assets/img/${logo}`)" alt="">
         </li>
 
 
@@ -12,7 +12,7 @@
           <!-- links -->
           <ul class="links_box _row justify-content-around align-items-center">
             <li v-for="link in links" :key="link" class="link_item" :class="link + '_father'">
-              <div :id="link" class="_dropdown" ></div>
+              <!-- <div :id="link" class="_dropdown" ></div> -->
               <a href="">{{link}} <i class="fas fa-chevron-down"></i><div class="line"></div></a>
             </li>
           </ul>
