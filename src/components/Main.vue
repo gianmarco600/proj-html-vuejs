@@ -67,7 +67,7 @@
         :coursesDatas="mainDatas.courses"
         :courses="courses"/>
         <Feeds 
-        :feedsDatas="mainDatas.feeds"
+        :feedsDatas="mainDatas.feed"
         :clients="clients"/>
         <Blogs 
         :blogsData="mainDatas.blog"
@@ -139,6 +139,7 @@ main{
 
             }
             h6{
+                margin-top: 40px;
                 text-align: center;
                 color: rgb(185, 185, 185);
             }

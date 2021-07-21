@@ -13,8 +13,8 @@
                             <div class="text_info">
                                 <div class="prezzo">{{course.price}}</div>
                                 <div class="des">{{course.descr}}</div>
-                                <span class="sub lessons"><i class="far fa-sticky-note"></i>{{course.lessons}} lessons</span>
-                                <span class="sub students"><i class="far fa-user"></i> {{course.students}} students</span>
+                                <span class="sub lessons"><i class="far fa-sticky-note"></i><span>{{course.lessons}} lessons</span></span>
+                                <span class="sub students"><i class="far fa-user"></i><span>{{course.students}} students </span></span>
                             </div>
                         </div>
                     </div>
@@ -135,6 +135,9 @@ section{
                             color: $Silver;
                             margin-right: 20px;
                             margin-top: 10px;
+                            span{
+                                margin-left: 5px;
+                            }
                         }
                     }
                 }    

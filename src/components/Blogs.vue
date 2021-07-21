@@ -8,8 +8,8 @@
                     <img :src="require(`@/assets/img/${blog.src}`)" alt="">
                     <h6>{{blog.tema}}</h6>
                     <p>{{blog.main}} </p>
-                    <span>{{blog.data}}</span>
-                    <span>{{blog.views}} views</span>
+                    <span class="info"><i class="far fa-calendar"></i><span>{{blog.data}}</span></span>
+                    <span class="info"><i class="far fa-eye"></i><span>{{blog.views}} views</span></span>
                 </div>
             </div>
         </div>
@@ -53,6 +53,12 @@ section{
         width: 100%;
         padding: 10px;
         margin: 70px 0;
+        .info{
+            span{
+                margin-left: 5px;
+                font-size: 14px;
+            }
+        }
         img{
             width: 95%;
             border-radius: 10px;

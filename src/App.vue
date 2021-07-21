@@ -202,19 +202,23 @@ export default {
           cols:[
             {
               main:'Idea Discussion',
-              text:'Get teamed up with the specialists who work and teach coding for years at famous universities.'
+              text:'Get teamed up with the specialists who work and teach coding for years at famous universities.',
+              ico:'fab fa-font-awesome-flag'
             },
             {
               main:'Web Development',
-              text:'Learn to start building a webpage from scratch. You decide your own pace, course and speed.'
+              text:'Learn to start building a webpage from scratch. You decide your own pace, course and speed.',
+              ico:'fas fa-cog'
             },
             {
               main:'System Administration',
-              text:'Learners are encouraged to study the mechanism and structure of system administration. '
+              text:'Learners are encouraged to study the mechanism and structure of system administration. ',
+              ico:'far fa-life-ring'
             },
             {
               main:'Graphic Design',
-              text:'Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness. '
+              text:'Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness. ',
+              ico:'fas fa-tv'
             }
           ],
           cta:{

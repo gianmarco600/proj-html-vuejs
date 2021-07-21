@@ -8,7 +8,7 @@
                 <h2>{{prefootDatas.main}}<span></span></h2>
                 <div class="row mt-5">
                     <div v-for="item in prefootDatas.cols" :key="item" class="col-3">
-                        <i class="fab fa-font-awesome-flag"></i>
+                        <div class="ico"><i :class="item.ico"></i></div>
                         <h4>{{item.main}}</h4>
                         <p>{{item.text}}</p>
                     </div>
@@ -52,10 +52,22 @@ width: 100%;
             width: 100%;
             height: 100%;
             position: relative;
+            .ico{
+                font-size: 100px;
+                padding-left: 50px;
+                
+            }
             img{
                 position: absolute;
                 bottom: -23px;
                 width: 90%;
+            }
+            h4{
+                margin-top: 30px;
+                font-size: 22px;
+                font-weight: 900;
+                text-align: left;
+
             }
             h5{
                 margin-top: 70px;

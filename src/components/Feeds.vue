@@ -17,7 +17,7 @@
                 
             </div>
             <div class="row">
-                <div v-for='client in feedsDatas.clients' :key="client" class="col-2 justify-content-around">
+                <div v-for='(client, i ) in feedsDatas.clients' :key="i" class="col-2 justify-content-around">
                     <img class="client" :src="require(`@/assets/img/${client}`)" alt="">
                 </div>
                 
@@ -91,7 +91,8 @@ section{
         }
     }
     .client{
-            width: 50%;
+            height: 35px;
+            
             margin: 0 auto;
             display: block;
             
