@@ -1,62 +1,117 @@
 <template>
     <main>
-        <section class="container-md ">
-            <div class="_box">
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae natus itaque dolore ut facere enim laboriosam ea exercitationem omnis, nesciunt placeat ullam.</h3>
-                <h4>fannie moreno</h4>
-                <h6>/founder & CEO</h6>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="_text">1.926</div>
-                    <div class="_subtext">finished sessions</div>
-                </div>  
-                <div class="col-3">
-                    <div class="_text">1.926</div>
-                    <div class="_subtext">finished sessions</div>
-                </div>   
-                <div class="col-3">
-                    <div class="_text">1.926</div>
-                    <div class="_subtext">finished sessions</div>
+        <div class="_bg">
+            <section class="container-md ">
+                <div class="_box">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae natus itaque dolore ut facere enim laboriosam ea exercitationem omnis, nesciunt placeat ullam.</h3>
+                    <h4>fannie moreno</h4>
+                    <h6>/founder & CEO</h6>
                 </div>
-                <div class="col-3">
-                    <div class="_text">1.926</div>
-                    <div class="_subtext">finished sessions</div>
-                </div>
-            </div>  
-            <div class="section_1">
                 <div class="row">
-                    <div class="col-6">
-                        <!-- colonna di sinistra col le 4 card -->
-
-
+                    <div class="col-3">
+                        <div class="_text">1.926</div>
+                        <div class="_subtext">finished sessions</div>
+                    </div>  
+                    <div class="col-3">
+                        <div class="_text">1.926</div>
+                        <div class="_subtext">finished sessions</div>
+                    </div>   
+                    <div class="col-3">
+                        <div class="_text">1.926</div>
+                        <div class="_subtext">finished sessions</div>
                     </div>
-                    <div class="col-6">
-                        <!-- colonna di destra -->
-                        <div class="_vertical_row">
-                            <div class="text_box_1">
-                                <h5>together we can create</h5>
-                                <strong>service we <span>can provide</span> for my clients.</strong>
-                                <ul>
-                                    <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
-                                    <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
-                                    <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
-                                    <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
-                                </ul>
-                                <button type="button" class="btn _green_btn">Primary</button>
+                    <div class="col-3">
+                        <div class="_text">1.926</div>
+                        <div class="_subtext">finished sessions</div>
+                    </div>
+                </div>  
+                <div class="section_1">
+                    <div class="row">
+                        <div class="col-6">
+                            <!-- colonna di sinistra col le 4 card -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="_vertical_row special_1">
+                                    <div class="col_4">
+                                        <div class="_card">
+                                            <strong>graphic Design</strong>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, odio illo vero corrupti minus atque quos culpa .
+                                            </p>
+                                            <img src="@/assets/img/home-6-service-image-01.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col_4">
+                                        <div class="_card">
+                                            <img class="fat" src="@/assets/img/home-6-service-image-03.png" alt="">
+                                            <strong>graphic Design</strong>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, odio illo vero corrupti minus atque quos culpa .
+                                            </p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="_vertical_row special_2">
+                                    <div class="col_4">
+                                        <div class="_card">
+                                            <strong>graphic Design</strong>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, odio illo vero corrupti minus atque quos culpa .
+                                            </p>
+                                            <img class="fat" src="@/assets/img/home-6-service-image-02.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col_4">
+                                        <div class="_card">
+                                            <img src="@/assets/img/home-6-service-image-04.png" alt="">
+                                            <strong>graphic Design</strong>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, odio illo vero corrupti minus atque quos culpa .
+                                            </p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
+                        </div>
+                        <div class="col-6">
+                            <!-- colonna di destra -->
+                            <div class="_vertical_row">
+                                <div class="text_box_1">
+                                    <h5>together we can create</h5>
+                                    <strong>service we <span>can provide</span> for my clients.</strong>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
+                                        <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
+                                        <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
+                                        <li><i class="fas fa-check"></i><span> Lorem ipsum dolor sit amet consectetur </span></li>
+                                    </ul>
+                                    <button type="button" class="btn _green_btn">Primary</button>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-            </div>    
-        </section>
+                </div>    
+            </section>
+            </div>
+        <Courses/>
+        <Feeds/>
     </main>
 </template>
 
 <script>
+import Courses from '@/components/Courses.vue'
+import Feeds from '@/components/Feeds.vue'
+
+
 export default {
     name:"Main",
+    components: {
+        Courses,
+        Feeds
+    },
     data(){
         return{
             
@@ -69,10 +124,13 @@ export default {
 @import '@/style/commons.scss';
 @import '@/style/vars.scss';
 
+._bg{
+   background-image: url('~@/assets/img/background-pattern-grid-line.png');
+    background-repeat: repeat; 
+}
 
 main{
-    background-image: url('~@/assets/img/background-pattern-grid-line.png');
-    background-repeat: repeat;
+    
     
     
     section{
@@ -132,6 +190,38 @@ main{
                         width: 100%;
                         justify-content: center;
                         align-items: center;
+                        .col_4{
+                            height: 55%;
+                            width: 100%;
+                            padding: 20px 0;
+                            ._card{
+                                width: 80%;
+                                margin: 20px auto;
+                                height: 100%;
+                                background-color: $White;
+                                border-radius: 7px;
+                                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                                padding: 15px 10px;
+                                
+                                p{
+                                    line-height: 1.2rem;
+                                    font-size: 14px;
+                                    margin: 10px 0;
+                                }
+                                img{
+                                    width: 100%;
+                                    bottom: 10px;
+                                }
+                                .fat{
+                                    width: 70%;
+                                    margin: 0 auto;
+                                }
+
+                                
+
+                            }
+                        }
+                                                
                         .text_box_1{
                             width: 90%;
                             height: 60%;
@@ -167,6 +257,14 @@ main{
                             }
                         }
                     }
+                    .special_1{
+                                height: 70%;
+                                margin-top: 40px;
+                            }
+                    .special_2{
+                        height: 70%;
+                        margin-top: 120px;
+                    }    
                 }
             }
         }
